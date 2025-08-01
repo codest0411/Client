@@ -21,7 +21,7 @@ export default function UploadAudio() {
     try {
       const formData = new FormData();
       formData.append('audio', file);
-      const res = await fetch('/api/transcriptions/whisper', {
+      const res = await fetch('https://server-t-1.onrender.com/api/transcriptions/whisper', {
         method: 'POST',
         body: formData,
       });
